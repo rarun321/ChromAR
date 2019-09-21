@@ -10,10 +10,9 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    var colorScanner = ColorScanner(rectanglePositionX: 68, rectanglePositionY: 249, rectangleWidth: 250, rectangleHeight: 250)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         
         
         //Adds ColorScanner To View
-        self.view.addSubview(colorScanner.CreateColorScanner())
+        self.view.addSubview(AddColorScannerRectangle())
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +38,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
 
          //Run the view's session
         sceneView.session.run(configuration)
-        sceneView.session.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,14 +46,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-
-    var count = 0
-   func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        count+=1
-        if count % 250 == 0 {
-            let image = colorScanner.SnapShotOfColorScanner(view: self.view)
-        }
-        print("Updated")
+    
+    //Uses ColorScanner class to create instance of CGRectangle
+    func AddColorScannerRectangle() -> UIView{
+        let colorScanner = ColorScanner(rectanglePositionX: 68, rectanglePositionY: 249, rectangleWidth: 250, rectangleHeight: 250)
+        return colorScanner.CreateColorScanner()
     }
 }
 

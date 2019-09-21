@@ -9,7 +9,6 @@
 import Foundation
 import CoreGraphics
 import UIKit
-import CoreMedia
 
 //ColorScanner is the rectangle in the middle of the application that detects color
 class ColorScanner{
@@ -32,14 +31,6 @@ class ColorScanner{
         let colorScannerView = UIView(frame: colorScanner)
         colorScannerView.backgroundColor = UIColor.clear
         return colorScannerView
-    }
-    
-    //Takes A Snapshot Of Whats Within The ColorScanner
-    func SnapShotOfColorScanner(view: UIView) -> UIImage{
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: rectangleWidth, height: rectangleHeight), false, 0)
-        view.drawHierarchy(in: CGRect(x: -(rectangleWidth), y: -(rectangleHeight), width: view.bounds.size.width, height: view.bounds.size.height), afterScreenUpdates: false)
-        let croppedShot : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        return croppedShot;
     }
 }
 
