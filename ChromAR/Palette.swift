@@ -29,28 +29,28 @@ class Palette {
     }
     
     func getPalette () -> [ColorWrapper] {
-        var wrappedPalette = [ColorWrapper]()
+        var wrappedColors = [ColorWrapper]()
         for (i, color) in palette.enumerated() {
-            wrappedPalette.append(ColorWrapper(
+            wrappedColors.append(ColorWrapper(
                 color: color,
                 index: i,
                 matched: false
             ))
         }
-        return wrappedPalette
+        return wrappedColors
     }
     
     // get palette, and 4 matched colors
     func getMatchedPalette () -> [ColorWrapper] {
-        var wrappedPalette = getPalette()
+        var wrappedColors = getPalette()
         for (i, color) in matchPalette(base: palette).enumerated() {
-            wrappedPalette.append(ColorWrapper(
+            wrappedColors.append(ColorWrapper(
                 color: color,
                 index: i,
                 matched: true
             ))
         }
-        return wrappedPalette
+        return wrappedColors
     }
     
     // generate 4 colors based on palette

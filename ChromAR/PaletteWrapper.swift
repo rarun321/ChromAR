@@ -1,5 +1,5 @@
 //
-//  ColorWrapper.swift
+//  PaletteWrapper.swift
 //  ChromAR
 //
 //  Created by Tom Hansen on 9/21/19.
@@ -7,10 +7,8 @@
 //
 
 import Foundation
-import UIKit
 
-struct ColorWrapper {
-    var color: UIColor
+struct PaletteWrapper {
+    var palette: Palette
     var index: Int
-    var matched: Bool
 }
