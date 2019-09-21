@@ -9,6 +9,7 @@
 import Foundation
 import CoreGraphics
 import UIKit
+import ARKit
 
 //ColorScanner is the rectangle in the middle of the application that detects color
 class ColorScanner{
@@ -36,9 +37,20 @@ class ColorScanner{
     //Takes A Snapshot Of Whats Within The ColorScanner
       func SnapShotOfColorScanner(view: UIView) -> UIImage{
           UIGraphicsBeginImageContextWithOptions(CGSize(width: rectangleWidth, height: rectangleHeight), false, 0)
-          view.drawHierarchy(in: CGRect(x: -(rectangleWidth), y: -(rectangleHeight), width: view.bounds.size.width, height: view.bounds.size.height), afterScreenUpdates: false)
+          view.drawHierarchy(in: CGRect(x: -(rectanglePositionX), y: -(rectanglePositionY), width: view.bounds.size.width, height: view.bounds.size.height), afterScreenUpdates: false)
           let croppedShot : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
           return croppedShot;
       }
+    
+    //Adds SnapShot Taken From UI To The AR Node
+    func AddSnapShotToNode(image : UIImage, node: SCNNode){
+        let materials = SCNMaterial()
+        materials.diffuse.contents = image
+        node.geometry?.materials = [materials]
+    }
+    
+    func ProcessUIImage(image: UIImage){
+       
+    }
 }
 
