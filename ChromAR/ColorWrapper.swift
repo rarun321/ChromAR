@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+struct ColorWrapper {
+    var color: UIColor;
+    var index: Int;
+    var matched: Bool;
+}

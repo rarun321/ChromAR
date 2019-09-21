@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08963C7D23368CC70093163F /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08963C7C23368CC70093163F /* Palette.swift */; };
+		08963C7F23368F700093163F /* ColorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08963C7E23368F700093163F /* ColorWrapper.swift */; };
 		1CD8CC70233688D10094D9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8CC6F233688D10094D9E4 /* AppDelegate.swift */; };
 		1CD8CC72233688D10094D9E4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD8CC71233688D10094D9E4 /* art.scnassets */; };
 		1CD8CC74233688D10094D9E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8CC73233688D10094D9E4 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08963C7C23368CC70093163F /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		08963C7E23368F700093163F /* ColorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWrapper.swift; sourceTree = "<group>"; };
 		1CD8CC6C233688D10094D9E4 /* ChromAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD8CC6F233688D10094D9E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CD8CC71233688D10094D9E4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				1CD8CC78233688D10094D9E4 /* Assets.xcassets */,
 				1CD8CC7A233688D10094D9E4 /* LaunchScreen.storyboard */,
 				1CD8CC7D233688D10094D9E4 /* Info.plist */,
+				08963C7C23368CC70093163F /* Palette.swift */,
+				08963C7E23368F700093163F /* ColorWrapper.swift */,
 			);
 			path = ChromAR;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08963C7D23368CC70093163F /* Palette.swift in Sources */,
+				08963C7F23368F700093163F /* ColorWrapper.swift in Sources */,
 				1CD8CC74233688D10094D9E4 /* ViewController.swift in Sources */,
 				1CD8CC70233688D10094D9E4 /* AppDelegate.swift in Sources */,
 			);
