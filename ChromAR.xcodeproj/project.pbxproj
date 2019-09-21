@@ -19,11 +19,7 @@
 		1CD8CC7C233688D10094D9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD8CC7A233688D10094D9E4 /* LaunchScreen.storyboard */; };
 		1CD8CC87233688D10094D9E4 /* ChromARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8CC86233688D10094D9E4 /* ChromARTests.swift */; };
 		1CD8CC92233688D10094D9E4 /* ChromARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8CC91233688D10094D9E4 /* ChromARUITests.swift */; };
-<<<<<<< Updated upstream
 		1CD8CCA62336A9B70094D9E4 /* ColorScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8CCA52336A9B70094D9E4 /* ColorScanner.swift */; };
-=======
-		CECB8F9323369BCB00BC06EE /* ColorHarmonies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB8F9223369BCB00BC06EE /* ColorHarmonies.swift */; };
->>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +58,7 @@
 		1CD8CC8D233688D10094D9E4 /* ChromARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChromARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD8CC91233688D10094D9E4 /* ChromARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromARUITests.swift; sourceTree = "<group>"; };
 		1CD8CC93233688D10094D9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
 		1CD8CCA52336A9B70094D9E4 /* ColorScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScanner.swift; sourceTree = "<group>"; };
-=======
-		CECB8F9223369BCB00BC06EE /* ColorHarmonies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHarmonies.swift; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,13 +118,9 @@
 				1CD8CC7D233688D10094D9E4 /* Info.plist */,
 				08963C7C23368CC70093163F /* Palette.swift */,
 				08963C7E23368F700093163F /* ColorWrapper.swift */,
-<<<<<<< Updated upstream
 				085EBD662336A81900D0C2B3 /* Album.swift */,
 				085EBD682336A83F00D0C2B3 /* PaletteWrapper.swift */,
 				1CD8CCA52336A9B70094D9E4 /* ColorScanner.swift */,
-=======
-				CECB8F9223369BCB00BC06EE /* ColorHarmonies.swift */,
->>>>>>> Stashed changes
 			);
 			path = ChromAR;
 			sourceTree = "<group>";
@@ -287,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB8F9323369BCB00BC06EE /* ColorHarmonies.swift in Sources */,
 				08963C7D23368CC70093163F /* Palette.swift in Sources */,
 				1CD8CCA62336A9B70094D9E4 /* ColorScanner.swift in Sources */,
 				08963C7F23368F700093163F /* ColorWrapper.swift in Sources */,
