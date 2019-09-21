@@ -13,6 +13,7 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    var colorScanner = ColorScanner(rectanglePositionX: 68, rectanglePositionY: 249, rectangleWidth: 250, rectangleHeight: 250)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +26,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the scene to the view
         sceneView.scene = scene
         
-        
+            
         //Adds ColorScanner To View
-        self.view.addSubview(AddColorScannerRectangle())
+        self.view.addSubview(colorScanner.CreateColorScanner())
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,5 +53,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let colorScanner = ColorScanner(rectanglePositionX: 68, rectanglePositionY: 249, rectangleWidth: 250, rectangleHeight: 250)
         return colorScanner.CreateColorScanner()
     }
+    
+    var count = 0
+     func session(_ session: ARSession, didUpdate frame: ARFrame) {
+          count+=1
+          if count % 250 == 0 {
+              let image = colorScanner.SnapShotOfColorScanner(view: self.view)
+          }
+          print("Updated")
+      }
 }
 
