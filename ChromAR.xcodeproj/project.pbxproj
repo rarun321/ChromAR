@@ -17,6 +17,7 @@
 		1CD8CC7C233688D10094D9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD8CC7A233688D10094D9E4 /* LaunchScreen.storyboard */; };
 		1CD8CC87233688D10094D9E4 /* ChromARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8CC86233688D10094D9E4 /* ChromARTests.swift */; };
 		1CD8CC92233688D10094D9E4 /* ChromARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8CC91233688D10094D9E4 /* ChromARUITests.swift */; };
+		1CD8CCA22336A7960094D9E4 /* ColorScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8CCA12336A7950094D9E4 /* ColorScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1CD8CC8D233688D10094D9E4 /* ChromARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChromARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD8CC91233688D10094D9E4 /* ChromARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromARUITests.swift; sourceTree = "<group>"; };
 		1CD8CC93233688D10094D9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD8CCA12336A7950094D9E4 /* ColorScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorScanner.swift; path = "../../ChromAR copy/ChromAR/ColorScanner.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		1CD8CC6E233688D10094D9E4 /* ChromAR */ = {
 			isa = PBXGroup;
 			children = (
+				1CD8CCA12336A7950094D9E4 /* ColorScanner.swift */,
 				1CD8CC6F233688D10094D9E4 /* AppDelegate.swift */,
 				1CD8CC71233688D10094D9E4 /* art.scnassets */,
 				1CD8CC73233688D10094D9E4 /* ViewController.swift */,
@@ -268,6 +271,7 @@
 			files = (
 				08963C7D23368CC70093163F /* Palette.swift in Sources */,
 				08963C7F23368F700093163F /* ColorWrapper.swift in Sources */,
+				1CD8CCA22336A7960094D9E4 /* ColorScanner.swift in Sources */,
 				1CD8CC74233688D10094D9E4 /* ViewController.swift in Sources */,
 				1CD8CC70233688D10094D9E4 /* AppDelegate.swift in Sources */,
 			);

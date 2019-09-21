@@ -1,4 +1,4 @@
-//
+\//
 //  ViewController.swift
 //  ChromAR
 //
@@ -20,23 +20,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the view's delegate
         sceneView.delegate = self
         
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
+        let scene = SCNScene(named: "art.scnassets/colorScanner.scn")!
         // Set the scene to the view
         sceneView.scene = scene
+        
+        
+        //Adds ColorScanner To View
+        self.view.addSubview(AddColorScannerRectangle())
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+         //Create a session configuration
+        let configuration = ARImageTrackingConfiguration()
 
-        // Run the view's session
+         //Run the view's session
         sceneView.session.run(configuration)
     }
     
@@ -46,30 +46,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-
-    // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+    //Uses ColorScanner class to create instance of CGRectangle
+    func AddColorScannerRectangle() -> UIView{
+        let colorScanner = ColorScanner(rectanglePositionX: 68, rectanglePositionY: 249, rectangleWidth: 250, rectangleHeight: 250)
+        return colorScanner.CreateColorScanner()
     }
 }
+
