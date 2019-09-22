@@ -30,6 +30,8 @@ class ColorScanner{
     func CreateColorScanner() -> UIView{
         let colorScanner = CGRect(x: rectanglePositionX, y: rectanglePositionY, width: rectangleWidth, height: rectangleHeight)
         let colorScannerView = UIView(frame: colorScanner)
+        colorScannerView.layer.borderWidth = 10
+        colorScannerView.layer.borderColor = UIColor.black.cgColor
         colorScannerView.backgroundColor = UIColor.clear
         return colorScannerView
     }
