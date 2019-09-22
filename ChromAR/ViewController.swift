@@ -54,6 +54,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         return colorScanner.CreateColorScanner()
     }
     
+    //Delegate That Gets Called When Frame Changes
      var count = 0
      func session(_ session: ARSession, didUpdate frame: ARFrame) {
           count+=1
@@ -64,5 +65,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
           }
         print("Update")
       }
+    
+    
 }
 

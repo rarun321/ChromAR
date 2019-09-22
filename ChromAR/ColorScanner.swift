@@ -55,6 +55,7 @@ class ColorScanner{
     }
 }
 
+//Extension Of UIImage Class And Gets RGB Values For Image
 extension UIImage {
     func GetRGBValues() -> UIColor{
         var hugeIntegerRed : Int64 = 0
