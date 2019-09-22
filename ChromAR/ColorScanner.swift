@@ -49,6 +49,12 @@ class ColorScanner{
         node.geometry?.materials = [materials]
     }
     
+    //Changes Text On The AR Node
+    func ChangeTextForColorName(colorName : String, node : SCNNode){
+        let textNode = node.geometry as! SCNText
+        textNode.string = colorName
+    }
+    
     func Process(image : UIImage) -> UIColor{
        let color = image.GetRGBValues()
        return color;
