@@ -49,8 +49,49 @@ class ColorScanner{
         node.geometry?.materials = [materials]
     }
     
-    func ProcessUIImage(image: UIImage){
-       
+    func Process(image : UIImage){
+       image.GetRGBValues()
+    }
+}
+
+
+extension UIImage {
+    func GetRGBValues(){
+        let result = NSMutableArray()
+
+        var hugeIntegerRed : Int64 = 0
+        var hugeIntegerGreen : Int64 = 0
+        var hugeIntegerBlue : Int64 = 0
+        
+        let img = self.cgImage!
+        let width = img.width
+        let height = img.height
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+
+        var rawData = [UInt8](repeating: 0, count: width*height*4)
+        let bytesPerPixel = 4
+        let bytesPerRow = bytesPerPixel * width
+        let bytesPerComponent = 8
+
+        let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue | CGBitmapInfo.byteOrder32Big.rawValue
+        let context = CGContext(data: &rawData, width: width, height: height, bitsPerComponent: bytesPerComponent, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo)
+        let rect = CGRect(origin: .zero, size: CGSize(width: width, height: height))
+        context?.draw(cgImage!, in: rect)
+        for x in 0..<width {
+            for y in 0..<height {
+                let byteIndex = (bytesPerRow * x) + y * bytesPerPixel
+
+                hugeIntegerRed +=  Int64(rawData[byteIndex])
+                hugeIntegerGreen +=  Int64(rawData[byteIndex + 1])
+                hugeIntegerBlue +=  Int64(rawData[byteIndex + 2])
+            }
+        }
+        
+        hugeIntegerRed = hugeIntegerRed / Int64((width * height))
+        hugeIntegerGreen = hugeIntegerGreen / Int64((width * height))
+        hugeIntegerBlue = hugeIntegerBlue / Int64((width * height))
+        
+        let color = UIColor(red: CGFloat(hugeIntegerRed) / 255, green: CGFloat(hugeIntegerGreen) / 255, blue: CGFloat(hugeIntegerBlue) / 255, alpha: 1)
     }
 }
 
