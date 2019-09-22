@@ -65,7 +65,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
               colorScanner.ChangeTextForColorName(colorName: IdentifyColor.identify(color: color), node: sceneView.scene.rootNode.childNodes[1])
               colorScanner.ChangeTextForColorName(colorName: IdentifyColor.identify(color: color), node: sceneView.scene.rootNode.childNodes[2])
               colorScanner.ChangeTextForColorName(colorName: IdentifyColor.identify(color: color), node: sceneView.scene.rootNode.childNodes[3])
-            colorScanner.ChangeTextForColorName(colorName: IdentifyColor.identify(color: color), node: sceneView.scene.rootNode.childNodes[4])
+              colorScanner.ChangeTextForColorName(colorName: IdentifyColor.identify(color: color), node: sceneView.scene.rootNode.childNodes[4])
           }
         print("Update")
       }
