@@ -63,6 +63,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
               let color = colorScanner.Process(image: image)
               colorScanner.AddSnapShotToNode(color: color, node: sceneView.scene.rootNode.childNodes[0])
               colorScanner.ChangeTextForColorName(colorName: IdentifyColor.identify(color: color), node: sceneView.scene.rootNode.childNodes[1])
+              colorScanner.ChangeTextForColorName(colorName: IdentifyColor.identify(color: color), node: sceneView.scene.rootNode.childNodes[2])
+              colorScanner.ChangeTextForColorName(colorName: IdentifyColor.identify(color: color), node: sceneView.scene.rootNode.childNodes[3])
+            colorScanner.ChangeTextForColorName(colorName: IdentifyColor.identify(color: color), node: sceneView.scene.rootNode.childNodes[4])
           }
         print("Update")
       }
