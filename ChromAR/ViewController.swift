@@ -59,10 +59,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
           count+=1
           if count % 250 == 0 {
               let image = colorScanner.SnapShotOfColorScanner(view: self.view)
-              colorScanner.AddSnapShotToNode(image: image, node: sceneView.scene.rootNode.childNodes[0])
-              colorScanner.Process(image: image)
+              let color = colorScanner.Process(image: image)
+              colorScanner.AddSnapShotToNode(color: color, node: sceneView.scene.rootNode.childNodes[0])
           }
-        
         print("Update")
       }
 }

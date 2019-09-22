@@ -43,22 +43,20 @@ class ColorScanner{
       }
     
     //Adds SnapShot Taken From UI To The AR Node
-    func AddSnapShotToNode(image : UIImage, node: SCNNode){
+    func AddSnapShotToNode(color : UIColor, node: SCNNode){
         let materials = SCNMaterial()
-        materials.diffuse.contents = image
+        materials.diffuse.contents = color
         node.geometry?.materials = [materials]
     }
     
-    func Process(image : UIImage){
-       image.GetRGBValues()
+    func Process(image : UIImage) -> UIColor{
+       let color = image.GetRGBValues()
+       return color;
     }
 }
 
-
 extension UIImage {
-    func GetRGBValues(){
-        let result = NSMutableArray()
-
+    func GetRGBValues() -> UIColor{
         var hugeIntegerRed : Int64 = 0
         var hugeIntegerGreen : Int64 = 0
         var hugeIntegerBlue : Int64 = 0
@@ -92,6 +90,8 @@ extension UIImage {
         hugeIntegerBlue = hugeIntegerBlue / Int64((width * height))
         
         let color = UIColor(red: CGFloat(hugeIntegerRed) / 255, green: CGFloat(hugeIntegerGreen) / 255, blue: CGFloat(hugeIntegerBlue) / 255, alpha: 1)
+        
+        return color
     }
 }
 
