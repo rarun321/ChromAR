@@ -46,9 +46,22 @@ class IdentifyColor {
     }
     
     static func proximity (color: UIColor, other: UIColor) -> CGFloat {
-        let red = abs(color.ciColor.red - other.ciColor.red)
-        let green = abs(color.ciColor.green - other.ciColor.green)
-        let blue = abs(color.ciColor.blue - other.ciColor.blue)
+        let (colorRed, colorGreen, colorBlue, _) = color.components
+        let (otherRed, otherGreen, otherBlue, _) = other.components
+        
+        let red = abs(colorRed - otherRed)
+        let green = abs(colorGreen - otherGreen)
+        let blue = abs(colorBlue - otherBlue)
         return red + green + blue
+    }
+}
+
+extension UIColor {
+    var coreImageColor: CIColor {
+        return CIColor(color: self)
+    }
+    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        let coreImageColor = self.coreImageColor
+        return (coreImageColor.red, coreImageColor.green, coreImageColor.blue, coreImageColor.alpha)
     }
 }
