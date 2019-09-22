@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0815337D2336FEE50033A874 /* IdentifyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815337C2336FEE50033A874 /* IdentifyColor.swift */; };
 		085EBD672336A81900D0C2B3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EBD662336A81900D0C2B3 /* Album.swift */; };
 		085EBD692336A83F00D0C2B3 /* PaletteWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EBD682336A83F00D0C2B3 /* PaletteWrapper.swift */; };
 		085EBD6D2336B46500D0C2B3 /* PaletteSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085EBD6C2336B46500D0C2B3 /* PaletteSwatch.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0815337C2336FEE50033A874 /* IdentifyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyColor.swift; sourceTree = "<group>"; };
 		085EBD662336A81900D0C2B3 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		085EBD682336A83F00D0C2B3 /* PaletteWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteWrapper.swift; sourceTree = "<group>"; };
 		085EBD6C2336B46500D0C2B3 /* PaletteSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteSwatch.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				085EBD662336A81900D0C2B3 /* Album.swift */,
 				085EBD682336A83F00D0C2B3 /* PaletteWrapper.swift */,
 				1CD8CCA52336A9B70094D9E4 /* ColorScanner.swift */,
+				0815337C2336FEE50033A874 /* IdentifyColor.swift */,
 				085EBD6C2336B46500D0C2B3 /* PaletteSwatch.swift */,
 				1CD8CC73233688D10094D9E4 /* ViewController.swift */,
 				085EBD6E2336C3A000D0C2B3 /* AlbumViewController.swift */,
@@ -286,6 +289,7 @@
 				08963C7F23368F700093163F /* ColorWrapper.swift in Sources */,
 				085EBD6F2336C3A000D0C2B3 /* AlbumViewController.swift in Sources */,
 				085EBD692336A83F00D0C2B3 /* PaletteWrapper.swift in Sources */,
+				0815337D2336FEE50033A874 /* IdentifyColor.swift in Sources */,
 				1CD8CC74233688D10094D9E4 /* ViewController.swift in Sources */,
 				1CD8CC70233688D10094D9E4 /* AppDelegate.swift in Sources */,
 				085EBD672336A81900D0C2B3 /* Album.swift in Sources */,
