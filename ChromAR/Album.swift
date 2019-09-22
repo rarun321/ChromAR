@@ -9,23 +9,19 @@
 import Foundation
 
 class Album {
-    var album: [Palette]
+    static var album = [Palette]()
     
-    init() {
-        album = [Palette]()
+    static func addPalette () {
+        Album.album.append(Palette())
     }
     
-    func addPalette () {
-        album.append(Palette())
+    static func removePalette (index: Int) {
+        Album.album.remove(at: index);
     }
     
-    func removePalette (index: Int) {
-        album.remove(at: index);
-    }
-    
-    func getAlbum () -> [PaletteWrapper] {
+    static func getAlbum () -> [PaletteWrapper] {
         var wrappedPalettes = [PaletteWrapper]()
-        for (i, palette) in album.enumerated() {
+        for (i, palette) in Album.album.enumerated() {
             wrappedPalettes.append(PaletteWrapper(
                 palette: palette,
                 index: i

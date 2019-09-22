@@ -32,5 +32,7 @@ class ColorScanner{
         colorScannerView.backgroundColor = UIColor.clear
         return colorScannerView
     }
+    
+    
 }
 
