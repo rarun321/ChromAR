@@ -86,10 +86,10 @@ class IdentifyColor {
         let (colorRed, colorGreen, colorBlue, _) = color.components
         let (otherRed, otherGreen, otherBlue, _) = other.components
         
-        let red = abs(colorRed - otherRed)
-        let green = abs(colorGreen - otherGreen)
-        let blue = abs(colorBlue - otherBlue)
-        return red + green + blue
+        let red = colorRed - otherRed
+        let green = colorGreen - otherGreen
+        let blue = colorBlue - otherBlue
+        return red * red + green * green + blue * blue
     }
 }
 
